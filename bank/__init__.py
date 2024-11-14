@@ -12,6 +12,9 @@ class Account:
     def close(self) -> None:
         self.closed = True
 
+    def deposit(self, amount: int) -> None:
+        self.balance += amount
+
 
 accounts: list[Account] = []
 

@@ -24,3 +24,12 @@ def test_accounts_have_numerical_balance() -> None:
     account = bank.Account()
 
     assert account.balance == 0
+
+
+def test_accounts_can_receive_deposits() -> None:
+    account = bank.Account()
+
+    account.deposit(100)
+    account.deposit(100)
+
+    assert account.balance == 200
