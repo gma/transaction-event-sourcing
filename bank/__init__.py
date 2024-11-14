@@ -7,6 +7,7 @@ __all__: list[str] = []
 @dataclasses.dataclass
 class Account:
     closed: bool = False
+    balance: int = 0
 
     def close(self) -> None:
         self.closed = True

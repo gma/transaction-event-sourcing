@@ -18,3 +18,9 @@ def test_closing_an_account_marks_it_as_closed() -> None:
     account.close()
 
     assert account.closed
+
+
+def test_accounts_have_numerical_balance() -> None:
+    account = bank.Account()
+
+    assert account.balance == 0
