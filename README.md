@@ -11,9 +11,10 @@ The plan was simple. Implement code for a bank account, that supports:
 - Withdrawing cash from an account
 - Checking the balance
 
-Then, the next task was to investigate [event sourcing], refactoring the solution to use that approach.
+Then, the next task was to investigate [event sourcing] or [CQRS], refactoring the solution to use that approach.
 
 [event sourcing]: https://martinfowler.com/eaaDev/EventSourcing.html
+[CQRS]: https://martinfowler.com/bliki/CQRS.html
 
 ## Running the tests
 
