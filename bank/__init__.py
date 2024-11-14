@@ -17,6 +17,11 @@ class Account:
             raise InvalidAmount(f'Deposits must be positive: {amount}')
         self.balance += amount
 
+    def withdraw(self, amount: int) -> None:
+        if amount < 0:
+            raise InvalidAmount(f'Withdrawals cannot be negative: {amount}')
+        self.balance -= amount
+
 
 class InvalidAmount(RuntimeError):
     pass

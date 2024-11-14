@@ -44,3 +44,21 @@ def test_deposits_must_be_positive() -> None:
         account.deposit(-100)
 
     assert account.balance == 0
+
+
+def test_accounts_can_receive_withdrawals() -> None:
+    account = bank.Account()
+
+    account.withdraw(100)
+    account.withdraw(100)
+
+    assert account.balance == -200
+
+
+def test_withdrawals_must_be_positive() -> None:
+    account = bank.Account()
+
+    with pytest.raises(bank.InvalidAmount):
+        account.withdraw(-100)
+
+    assert account.balance == 0
