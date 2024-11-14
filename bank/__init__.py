@@ -1,7 +1,15 @@
+import dataclasses
+
+
 __all__: list[str] = []
 
 
-class Account: ...
+@dataclasses.dataclass
+class Account:
+    closed: bool = False
+
+    def close(self) -> None:
+        self.closed = True
 
 
 accounts: list[Account] = []
