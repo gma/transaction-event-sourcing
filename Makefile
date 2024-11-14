@@ -3,7 +3,7 @@ check: lint format types
 
 .PHONY: lint
 lint:
-	ruff check --show-source .
+	ruff check .
 
 .PHONY: format
 format:
