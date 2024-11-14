@@ -13,7 +13,13 @@ class Account:
         self.closed = True
 
     def deposit(self, amount: int) -> None:
+        if amount < 0:
+            raise InvalidAmount(f'Deposits must be positive: {amount}')
         self.balance += amount
+
+
+class InvalidAmount(RuntimeError):
+    pass
 
 
 accounts: list[Account] = []

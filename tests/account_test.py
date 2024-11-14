@@ -1,3 +1,5 @@
+import pytest
+
 from .context import bank
 
 
@@ -33,3 +35,12 @@ def test_accounts_can_receive_deposits() -> None:
     account.deposit(100)
 
     assert account.balance == 200
+
+
+def test_deposits_must_be_positive() -> None:
+    account = bank.Account()
+
+    with pytest.raises(bank.InvalidAmount):
+        account.deposit(-100)
+
+    assert account.balance == 0
