@@ -11,8 +11,14 @@ The plan was simple. Implement code for a bank account, that supports:
 - Withdrawing cash from an account
 - Checking the balance
 
+The above was as far as I got.
+
+> [!NOTE]
+> **Note to self:** Next time, don't invest any of your evening in updating your [python-template repository] to work cleanly with the latest versions of the available tooling!
+
 Then, the next task was to investigate [event sourcing] or [CQRS], refactoring the solution to use that approach.
 
+[python-template repository]: https://github.com/gma/python-template
 [event sourcing]: https://martinfowler.com/eaaDev/EventSourcing.html
 [CQRS]: https://martinfowler.com/bliki/CQRS.html
 
